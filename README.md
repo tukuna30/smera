@@ -1,8 +1,12 @@
-# Repository for Smera website
+# Repo for Smera website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+### Install libraries:-
+
+`yarn install`
 
 In the project directory, you can run:
 
