@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import smera from "./smera.svg";
+import smera2 from "./logo.png";
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -88,6 +89,8 @@ const App = () => {
         <div className='container'>
           <div className="wave">
             <img src={smera} alt="logo" className='logo' />
+            <img src={smera2} alt="logo" className='logo' />
+
             <div className="button-container">
             </div>
           </div>
