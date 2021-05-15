@@ -21,6 +21,9 @@ workflows:
           post-steps:
             - run: npm run build
             - aws-s3/copy:
+                aws-access-key-id: AWS_ACCESS_KEY_ID_BLUE
+                aws-region: AWS_REGION_BLUE
+                aws-secret-access-key: AWS_SECRET_ACCESS_KEY_BLUE
                 from: build/
                 to: s3://smera.io
                 arguments: --recursive
