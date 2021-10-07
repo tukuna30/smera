@@ -135,7 +135,7 @@ button {
   left: 10px;
 }
 .mid-section {
-  display: flex;
+  display: block;
   flex-grow: 1;
   align-items: center;
   color: white;
@@ -282,4 +282,15 @@ button {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.internship {
+  font-size: 100px;
+  text-decoration: none;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+a {
+  text-decoration: none;
 }

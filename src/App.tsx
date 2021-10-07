@@ -13,7 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Internship from "./Interns";
 type Position = {
   x: number,
   y: number,
@@ -84,6 +85,7 @@ const App = () => {
 
   return (
     <div className="App">
+       <Router>
       <div style={{ background: 'lightsalmon' }} className="app-container">
         <div className='container'>
           <div className="wave">
@@ -92,16 +94,30 @@ const App = () => {
             </div>
           </div>
         </div>
+        
         <div className='mid-section' style={{ paddingLeft: '20px' }}>
-          <div><span style={{fontSize: '20px'}}>Not looking good?</span> Can you fix it with your skills?</div>
+        <Switch>
+         <Route exact path="/">
+          <div>
+            <span style={{fontSize: '20px'}}>Is it broken?</span> 
+            Want to you fix it with your skills?
+            </div>
+            <div style={{display: 'flex'}} className='internship'>
+                <Link style={{color: 'white', cursor: 'pointer'}} to={"/internship"}>Apply for an Internship</Link>
+            </div>
+          </Route>
+          <Route path="/internship">
+            <Internship />
+          </Route>
+          </Switch>
         </div>
+        
+       
+        
         <div className='container bottom'>
           <div className="wave bottom">
             <div className="button-container bottom">
               <span><a style={{ color: 'white', textDecoration: 'none' }} href="mailto:tukuna.patro@smera.io?subject=Suggestions">Have any suggestions?</a></span>
-              <div>
-              <span style={{color: 'white', cursor: 'pointer'}} onClick={() => openDialog(true)}>Learn more about Smera</span>
-              </div>
             </div>
           </div>
         </div>
@@ -130,6 +146,7 @@ const App = () => {
           </ListItem>
         </List>
       </Dialog>
+      </Router>
     </div>
   );
 }
