@@ -12,8 +12,6 @@ const renderInterns = () => {
     {
       name: "Deepak Kumar Naik",
       details: "Master in Computer Science",
-      imageUrl:
-        "https://avatars.hubspot.net/c1ee5ccbb81fd05508349abb71624006-100",
     },
     { name: "Subhasmita Kumari", details: "Master in Computer Science" },
     { name: "Suman Patro", details: "Master in Computer Science" },
