@@ -85,67 +85,66 @@ const App = () => {
 
   return (
     <div className="App">
-       <Router>
-      <div style={{ background: 'lightsalmon' }} className="app-container">
-        <div className='container'>
-          <div className="wave">
-            <img src={smera} alt="logo" className='logo' />
-            <div className="button-container">
+      <Router>
+        <div style={{ background: 'lightsalmon' }} className="app-container">
+          <div className='container'>
+            <div className="wave">
+              <img src={smera} alt="logo" className='logo' />
+              <div className="button-container">
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div className='mid-section' style={{ paddingLeft: '20px' }}>
-        <Switch>
-         <Route exact path="/">
-          <div>
-            <span style={{fontSize: '20px'}}>Is it broken?</span> 
-            Want to you fix it with your skills?
-            </div>
-            <div style={{display: 'flex'}} className='internship'>
-                <Link style={{color: 'white', cursor: 'pointer'}} to={"/internship"}>Apply for an Internship</Link>
-            </div>
-          </Route>
-          <Route path="/internship">
-            <Internship />
-          </Route>
-          </Switch>
-        </div>
-        
-       
-        
-        <div className='container bottom'>
-          <div className="wave bottom">
-            <div className="button-container bottom">
-              <span><a style={{ color: 'white', textDecoration: 'none' }} href="mailto:tukuna.patro@smera.io?subject=Suggestions">Have any suggestions?</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/*
+          <div className='mid-section' style={{ paddingLeft: '20px' }}>
+            <Switch>
+              <Route exact path="/">
+                <div>
+                  Test your skills
+                </div>
+                {/* <div style={{display: 'flex'}} className='internship'>
+                <Link style={{color: 'white', cursor: 'pointer'}} to={"/internship"}>Apply for an Internship</Link>
+            </div> */}
+              </Route>
+              <Route path="/internship">
+                <Internship />
+              </Route>
+            </Switch>
+          </div>
+
+
+
+          <div className='container bottom'>
+            <div className="wave bottom">
+              <div className="button-container bottom">
+                <span><a style={{ color: 'white', textDecoration: 'none' }} href="https://genlent.in">Made with &hearts; at Genlent Technologies</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*
  // @ts-ignore */}
-      <Dialog fullWidth open={dialogOpen} onClose={handleClose} TransitionComponent={Transition}>
-        <AppBar className={classes.appBar}>
-          <Toolbar>
-            <Typography variant="h6" className={classes.title}>
-             Smera Technologies Pvt. Ltd.
-            </Typography>
-            <Button autoFocus color="inherit" className={classes.button} onClick={handleClose}>
-              <CloseIcon />
-            </Button>
-          </Toolbar>
-        </AppBar>
-        <List>
-          <ListItem button>
-            <ListItemText primary="Learn Web Development" secondary="Build Projects" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText primary="JavaScript, HTML, CSS, Web standards, UI Frameworks, Web standards, Ruby on Rails" secondary="SCM, TDD, Agile" />
-          </ListItem>
-        </List>
-      </Dialog>
+        <Dialog fullWidth open={dialogOpen} onClose={handleClose} TransitionComponent={Transition}>
+          <AppBar className={classes.appBar}>
+            <Toolbar>
+              <Typography variant="h6" className={classes.title}>
+                Smera Technologies Pvt. Ltd.
+              </Typography>
+              <Button autoFocus color="inherit" className={classes.button} onClick={handleClose}>
+                <CloseIcon />
+              </Button>
+            </Toolbar>
+          </AppBar>
+          <List>
+            <ListItem button>
+              <ListItemText primary="Learn Web Development" secondary="Build Projects" />
+            </ListItem>
+            <Divider />
+            <ListItem button>
+              <ListItemText primary="JavaScript, HTML, CSS, Web standards, UI Frameworks, Web standards, Ruby on Rails" secondary="SCM, TDD, Agile" />
+            </ListItem>
+          </List>
+        </Dialog>
       </Router>
     </div>
   );
